@@ -4,7 +4,6 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score
 import pickle
 
-# load_digits is 8x8 images, built into sklearn — good for a fast baseline
 digits = load_digits()
 X, y = digits.data, digits.target
 
