@@ -14,7 +14,7 @@ def home():
 @app.route('/predict', methods=['POST'])
 def predict():
     data = request.get_json()
-    pixels = np.array(data['pixels']).reshape(1, -1)  # shape (1, 64)
+    pixels = np.array(data['pixels']).reshape(1, -1)   
     prediction = model.predict(pixels)[0]
     return jsonify({'prediction': int(prediction)})
 
