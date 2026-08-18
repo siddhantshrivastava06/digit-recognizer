@@ -17,7 +17,7 @@ request/response flow between the two.
 ## How it works
 
 1. User draws a digit on a 140x140 canvas.
-2. On "Predict," JS finds the bounding box of the drawn (non-black) pixels, crops to that
+2. On Predict, JS finds the bounding box of the drawn (non-black) pixels, crops to that
    box with padding, and resizes just the crop to 8x8 — matching the format the model was
    trained on.
 3. The 8x8 grayscale values are sent to /predict as a flat array of 64 numbers.
