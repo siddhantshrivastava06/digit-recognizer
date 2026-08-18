@@ -9,9 +9,8 @@ request/response flow between the two.
 
 ## Stack
 
-- **Model**: RandomForestClassifier (scikit-learn), trained on `load_digits` — sklearn's
-  built-in 8x8 grayscale digit dataset. Test accuracy: ~97%.
-- **Backend**: Flask. `/` serves the page, `/predict` accepts pixel data as JSON and
+- **Model**: RandomForestClassifier (scikit-learn)
+- **Backend**: Flask. Serves the page, /predict accepts pixel data as JSON and
   returns a prediction.
 - **Frontend**: plain HTML5 canvas + vanilla JS. No frameworks.
 
@@ -21,7 +20,7 @@ request/response flow between the two.
 2. On "Predict," JS finds the bounding box of the drawn (non-black) pixels, crops to that
    box with padding, and resizes just the crop to 8x8 — matching the format the model was
    trained on.
-3. The 8x8 grayscale values are sent to `/predict` as a flat array of 64 numbers.
+3. The 8x8 grayscale values are sent to /predict as a flat array of 64 numbers.
 4. Flask loads the pickled model, predicts, returns the digit as JSON.
 5. JS displays the result.
 
