@@ -16,9 +16,7 @@ The point was learning to use a model and understand a model and build a Flask b
 ## Approach & Results
 
 1. User draws a digit on a 140x140 canvas.
-2. On Predict, JS finds the bounding box of the drawn (non-black) pixels, crops to that
-   box with padding, and resizes just the crop to 8x8 — matching the format the model was
-   trained on.
+2. On Predict, JS finds the bounding box of the drawn pixels, crops and resizes to 8x8.
 3. The 8x8 grayscale values are sent to /predict. 
 4. The result is displayed.
 
