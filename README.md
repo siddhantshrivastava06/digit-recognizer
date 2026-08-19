@@ -2,7 +2,7 @@
 
 A Flask web app where you draw a digit (0-9) on a canvas and a trained model predicts it.
 
-## Description
+## Purpose
 
 The point was learning to use a model and understand a model and build a Flask backend and a HTML/JS frontend.
 
