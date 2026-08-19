@@ -2,17 +2,16 @@
 
 A Flask web app where you draw a digit (0-9) on a canvas and a trained model predicts it.
 
-## What this project is for
+## Description
 
-The point was learning to take a model out of a notebook and serve it through a real app: Flask backend, HTML/JS frontend,
-request/response flow between the two.
+The point was learning to take a model out of a notebook and serve it through a real app: Flask backend, HTML/JS frontend.
 
 ## Stack
 
-- **Model**: RandomForestClassifier (scikit-learn)
-- **Backend**: Flask. Serves the page, /predict accepts pixel data as JSON and
+- **Model**: RandomForestClassifier (impored from scikit-learn)
+- **Backend**: Flask. Serves the page, /predict accepts pixel data and
   returns a prediction.
-- **Frontend**: plain HTML5 canvas + vanilla JS. No frameworks.
+- **Frontend**: HTML and JS. 
 
 ## How it works
 
@@ -20,9 +19,8 @@ request/response flow between the two.
 2. On Predict, JS finds the bounding box of the drawn (non-black) pixels, crops to that
    box with padding, and resizes just the crop to 8x8 — matching the format the model was
    trained on.
-3. The 8x8 grayscale values are sent to /predict as a flat array of 64 numbers.
-4. Flask loads the pickled model, predicts, returns the digit as JSON.
-5. JS displays the result.
+3. The 8x8 grayscale values are sent to /predict. 
+4. The result is displayed.
 
 <img width="333" height="451" alt="image" src="https://github.com/user-attachments/assets/044ef6e9-7ac1-4aff-956d-321be03f06e5" />
 
