@@ -4,7 +4,7 @@ A Flask web app where you draw a digit (0-9) on a canvas and a trained model pre
 
 ## Description
 
-The point was learning to take a model out of a notebook and serve it through a real app: Flask backend, HTML/JS frontend.
+The point was learning to use a model and understand a model and build a Flask backend and a HTML/JS frontend.
 
 ## Stack
 
